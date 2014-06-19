@@ -1,0 +1,16 @@
+{
+	"name": "obscura",
+	"description": "Cross-platform photo management",
+	"version": "0.0.1",
+	"private": true,
+	"main": "index.html",
+	"window": {
+		"toolbar": false,
+		"width": 800,
+		"height": 600
+	},
+	"dependencies": {
+		"react-tools": "^0.10.0",
+		"traceur": "^0.0.45"
+	}
+}
