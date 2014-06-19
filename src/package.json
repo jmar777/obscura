@@ -3,7 +3,7 @@
 	"description": "Cross-platform photo management",
 	"version": "0.0.1",
 	"private": true,
-	"main": "index.html",
+	"main": "view/index.html",
 	"window": {
 		"toolbar": false,
 		"width": 800,
