@@ -2,7 +2,7 @@
 
 var App = React.createClass({
 	componentDidMount: function() {
-		document.body.addEventListener('keyup', e => {
+		window.addEventListener('keyup', e => {
 			// shift + ctrl + i
 			e.which === 73 && e.ctrlKey && e.shiftKey && this.showDevTools();
 		});
