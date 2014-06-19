@@ -16,12 +16,13 @@ build: $(src_files)
 	@mkdir -p build
 	@rsync -a --exclude '*.jsx' --exclude 'view/third-party/' src/ build/
 	@npm --prefix ./build install ./build
-	@cat src/view/components/* | $(jsx_bin) > build/view/components.js
-	@rmdir build/view/components
+	@mkdir -p build/view/components
+	@cat src/view/components/* | $(jsx_bin) > build/view/components/compiled.js
 	@find build -type f -name '*.js' \
 		! -path 'build/node_modules/*' ! -path 'build/.module-cache/*' \
 		-exec $(traceur_bin) --out {} --script {} \;
-	@cat src/view/third-party/* > build/view/third-party.js
+	@mkdir -p build/view/third-party
+	@cat src/view/third-party/* > build/view/third-party/compiled.js
 
 clean:
 	rm -rf build
