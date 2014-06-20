@@ -2,10 +2,8 @@
 
 var App = React.createClass({
 	componentDidMount: function() {
-		window.addEventListener('keyup', e => {
-			// shift + ctrl + i
-			e.which === 73 && e.ctrlKey && e.shiftKey && this.showDevTools();
-		});
+		// @todo: probably need additional key bindings for win/other
+		Mousetrap.bind('option+command+i', this.showDevTools);
 	},
 	showDevTools: function() {
 		require('nw.gui').Window.get().showDevTools();
