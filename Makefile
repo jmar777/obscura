@@ -25,9 +25,9 @@ build: $(src_files)
 		! -path 'build/node_modules/*' ! -path 'build/.module-cache/*' \
 		-exec $(traceur_bin) --out {} --script {} \;
 	@mkdir -p build/view/third-party
-	@cat src/view/third-party/* > build/view/third-party/compiled.js
+	@cat src/view/third-party/*\.js > build/view/third-party/compiled.js
 	@mkdir -p build/view/css
-	@$(stylus_bin) < src/view/css/main.styl > build/view/css/obscura.css
+	@$(stylus_bin) -I src/view/css --include-css < src/view/css/obscura.styl > build/view/css/obscura.css
 
 clean:
 	rm -rf build
