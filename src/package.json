@@ -11,6 +11,7 @@
 	},
 	"dependencies": {
 		"react-tools": "^0.10.0",
-		"traceur": "^0.0.45"
+		"traceur": "^0.0.45",
+		"stylus": "^0.46.3"
 	}
 }
