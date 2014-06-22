@@ -1,0 +1,13 @@
+#library-pane
+	background-color background-color
+	position fixed
+	top 0
+	height 100%
+	left library-pane-width * -1
+	width library-pane-width
+	overflow-x hidden
+	transition width default-animation-speed ease, left default-animation-speed ease
+
+#app.library-pane-expanded
+	#library-pane
+		left 0
